@@ -38,4 +38,13 @@ public class NormalProductTest {
         assertEquals(8, normalProduct.getQuality());
     }
 
+    @Test
+    public void should_quality_is_zero_when_one_day_passed_given_normal_product_quality_is_zero() {
+        NormalProduct normalProduct = new NormalProduct(3, 0);
+        normalProduct.oneDayPassed();
+        assertEquals( 2, normalProduct.getSellIn());
+        assertEquals(0, normalProduct.getQuality());
+
+    }
+
 }
