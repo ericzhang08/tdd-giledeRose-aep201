@@ -29,6 +29,14 @@ class BackStagePassTest {
         assertEquals(13, backStagePass.getQuality());
     }
 
+    @Test
+    public void should_quality_is_zero_and_sellIn_minus_one_when_one_day_passed_given_back_stage_pass_out_of_date() {
+        BackStagePass backStagePass = new BackStagePass(0, 10);
+        backStagePass.oneDayPassed();
+        assertEquals( -1, backStagePass.getSellIn());
+        assertEquals(0, backStagePass.getQuality());
+    }
+
 
 
 
