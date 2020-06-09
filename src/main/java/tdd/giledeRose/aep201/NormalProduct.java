@@ -10,6 +10,9 @@ public class NormalProduct {
     }
 
     public void oneDayPassed() {
+        if (sellIn <= 0) {
+            quality--;
+        }
         sellIn--;
         quality--;
     }
