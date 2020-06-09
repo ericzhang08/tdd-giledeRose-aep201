@@ -21,6 +21,9 @@ public class BackStagePass {
         if (sellIn <= 0) {
             quality =0;
         }
+        if (quality > 50) {
+            quality = 50;
+        }
         sellIn--;
 
     }
