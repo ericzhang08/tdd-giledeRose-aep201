@@ -1,8 +1,8 @@
 package tdd.giledeRose.aep201;
 
 public class BackStagePass {
-    private  int sellIn;
-    private  int quality;
+    private int sellIn;
+    private int quality;
 
     public BackStagePass(int sellIn, int quality) {
 
@@ -11,8 +11,12 @@ public class BackStagePass {
     }
 
     public void oneDayPassed() {
-        sellIn--;
         quality++;
+        if (sellIn <= 10) {
+            quality++;
+        }
+        sellIn--;
+
     }
 
     public int getSellIn() {
