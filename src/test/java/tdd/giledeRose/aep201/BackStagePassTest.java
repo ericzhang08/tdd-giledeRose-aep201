@@ -21,6 +21,15 @@ class BackStagePassTest {
         assertEquals(12, backStagePass.getQuality());
     }
 
+    @Test
+    public void should_quality_add_Three_and_sellIn_minus_one_when_one_day_passed_given_back_stage_pass_on_date_less_than_5_days() {
+        BackStagePass backStagePass = new BackStagePass(5, 10);
+        backStagePass.oneDayPassed();
+        assertEquals( 4, backStagePass.getSellIn());
+        assertEquals(13, backStagePass.getQuality());
+    }
+
+
 
 
 }
